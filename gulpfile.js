@@ -32,6 +32,9 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
+        },
+        ghostMode: {
+          scroll: true
         }
     });
 });
@@ -57,7 +60,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_config.yml'], ['jekyll-rebuild']);
 });
 
 /**

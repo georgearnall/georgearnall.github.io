@@ -1,4 +1,14 @@
-name: Your New Jekyll Site
+name: George Arnall
+siteURL: /
+title: George Arnall
 markdown: redcarpet
 highlighter: pygments # or rouge or null
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "georgearnall.com.sublime-project"]
+permalink: /:categories/:title/
+navigation: 
+  -    {name: "GitHub", url: "http://github.com/georgearnall"}
+  -    {name: "Resume", url: "/resume.pdf"}
+  -    {name: "Porfolio", url: "/porfolio/"}
+  # -    {name: "Contact", url: "#"}
+gems:
+  - jekyll-sitemap

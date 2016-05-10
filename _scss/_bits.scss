@@ -1,0 +1,19 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+%shadow {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.nothing {
+  text-align: center;
+  margin-top: 30vh;
+}

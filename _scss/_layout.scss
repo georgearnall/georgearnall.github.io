@@ -1,0 +1,107 @@
+html {
+    border-top: $highlightBarHeight solid $highlightColour;
+    border-bottom: $highlightBarHeight solid $highlightColour;
+}
+
+
+body {
+  margin: 0;
+  color: #242e1c;
+  font-family: arial;
+  background: $backgroundColour;
+  &:before {
+    @extend %shadow;
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    z-index: 0;
+    background-color: #fff;
+    border-top: $highlightBarHeight solid $highlightColour;
+    border-bottom: $highlightBarHeight solid $highlightColour;
+    @include media(">tablet") {
+      content: "";
+    }
+    @include media(">desktop") {
+      width: calc(50% - 289px);
+    }
+
+  }
+}
+.wrapper {
+  @extend %clearfix;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+aside {
+  overflow: auto;
+  @extend %shadow;
+  background: #fff;
+  text-align: center;
+  @include media(">tablet") {
+    text-align: left;
+    background: transparent;
+    width: 30%;
+    max-width: 413px;
+    position: fixed;
+    margin-right: -100%;
+    float: left;
+    box-shadow: none;
+  }
+  header {
+    @include media(">tablet") {
+      padding: 0 0 0 20%;
+    }
+  }
+  h1 {
+    margin-bottom: 0.5rem;
+    @include media(">tablet") {
+      margin-top: 5rem;
+    }
+  }
+  h2 {
+    margin-top: 0.5rem;
+  }
+}
+main {
+  display: flex;
+  min-height: calc(100vh - #{$highlightBarHeight *2});
+  flex-direction: column;
+  padding: 0;
+  @include media(">tablet") {
+    float: left;
+    margin-left: 30%;
+    padding: 0 6%;
+    width: 70%;
+  }
+  .main-wrapper {
+    flex: 1;
+    width: 100%;
+    @include media(">tablet") {
+      padding-top: 5%;
+    }
+
+    margin: 0 auto;
+  }
+}
+article {
+  @extend %shadow;
+  background: #fff;
+  margin: 5% 0;
+  padding: 5%;
+  @include media(">tablet") {
+    padding: 10%;
+  }
+  img {
+    @extend %shadow;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+footer {
+  padding: 2rem;
+}

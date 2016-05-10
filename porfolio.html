@@ -1,0 +1,13 @@
+---
+layout: default
+title: George Arnall - Portfolio
+---
+
+{% for post in site.categories.porfolio %}
+<article>
+  <img src="{{ post.image }}" alt="Preview of {{ post.title }}">
+  <h2>{{ post.title }}</h2>
+  {{ post.content }}
+  <a href="{{ post.siteURL }}" class="button" target="_blank">Visit Site</a>
+</article>
+{% endfor %}
