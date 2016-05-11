@@ -1,13 +1,16 @@
+## redirect georgearnall.com to new domain garnall.co.uk
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^georgearnall.com [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.georgearnall.com [NC]
 RewriteRule ^(.*)$ http://garnall.co.uk/$1 [L,R=301,NC]
 
+## redirect www. to non www.
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
+## gzipping
 <ifModule mod_gzip.c>
   mod_gzip_on Yes
   mod_gzip_dechunk Yes
@@ -19,10 +22,12 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
   mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
 </ifModule>
 
+## keep alive header - performance boost
 <ifModule mod_headers.c> 
   Header set Connection keep-alive
 </ifModule>
 
+## page speed reccomends 
 <IfModule mod_headers.c>
   <FilesMatch "\.(js|css|xml|gz)$">
     Header append Vary: Accept-Encoding
