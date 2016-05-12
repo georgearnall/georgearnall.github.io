@@ -87,21 +87,6 @@ main {
     margin: 0 auto;
   }
 }
-article {
-  @extend %shadow;
-  background: #fff;
-  margin: 5% 0;
-  padding: 5%;
-  @include media(">tablet") {
-    padding: 10%;
-  }
-  img {
-    @extend %shadow;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
 footer {
   padding: 2rem;
 }
