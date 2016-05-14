@@ -3,7 +3,6 @@ html {
     border-bottom: $highlightBarHeight solid $highlightColour;
 }
 
-
 body {
   margin: 0;
   color: #242e1c;
@@ -46,10 +45,11 @@ aside {
     background: transparent;
     width: 30%;
     max-width: 413px;
-    position: fixed;
+    position: relative;
     margin-right: -100%;
     float: left;
     box-shadow: none;
+    padding: 5rem 0;
   }
   header {
     @include media(">tablet") {
@@ -58,9 +58,9 @@ aside {
   }
   h1 {
     margin-bottom: 0.5rem;
-    @include media(">tablet") {
-      margin-top: 5rem;
-    }
+    // @include media(">tablet") {
+    //   margin-top: 5rem;
+    // }
   }
   h2 {
     margin-top: 0.5rem;
