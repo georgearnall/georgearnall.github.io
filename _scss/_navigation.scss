@@ -15,16 +15,12 @@ nav {
       display: block;
     }
   }
-  > * {
-    flex-grow: 1;
-    > * {
-      width: 100%;
-    }
-  }
   a {
+    float: left;
     padding: 1rem 0;
     font-size: 1.3rem;
     display: inline-block;
+    width: 25%;
 
     @include media(">tablet") {
       font-size: 1.1rem;

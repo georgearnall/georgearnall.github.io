@@ -17,12 +17,12 @@
             <h1><a href="{{ site.siteURL }}">{{ site.name }}</a></h1>
             <h2>Web Developer</h2>
           </header>
-          <nav>
+          <nav id="navigation">
             <h3>Links</h3>
               {% for p in site.navigation %}
                   <a href="{{ p.url }}" {% if page.url == p.url %} class="active"{% endif %} >{{ p.name }}</a>
               {% endfor %}
-              <span id="obf"><script>document.getElementById("obf").innerHTML="<n uers=\"znvygb:radhvel@trbetrneanyy.pbz\">Pbagnpg</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});document.body.appendChild(eo);</script>
+              <script id="obf">document.getElementById("navigation").innerHTML+="<n uers=\"znvygb:radhvel@trbetrneanyy.pbz\">Pbagnpg</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});var elem = document.getElementById("obf");elem.parentElement.removeChild(elem);</script>
           </nav>
         </aside>
 
