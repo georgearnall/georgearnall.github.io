@@ -24,9 +24,9 @@ body {
     @include media(">tablet") {
       content: "";
     }
-    // @include media(">desktop") {
-    //   width: calc(50% - 289px);
-    // }
+    @include media(">desktop") {
+      width: calc(50% - 289px);
+    }
 
   }
 }
