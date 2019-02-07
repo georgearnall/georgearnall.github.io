@@ -2,7 +2,7 @@
     <head>
         <title>{{ page.title }}</title>
 
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
 
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,6 +22,7 @@
               {% for p in site.navigation %}
                   <a href="{{ p.url }}" {% if page.url == p.url %} class="active"{% endif %} >{{ p.name }}</a>
               {% endfor %}
+              <!-- http://rot13.florianbersier.com/ -->
               <script id="obf">document.getElementById("navigation").innerHTML+="<n uers=\"znvygb:radhvel@trbetrneanyy.pbz\">Pbagnpg</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});var elem = document.getElementById("obf");elem.parentElement.removeChild(elem);</script>
           </nav>
         </aside>
