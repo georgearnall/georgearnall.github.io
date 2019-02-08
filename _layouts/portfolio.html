@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article>
+  <img src="{{ page.image }}" alt="Preview of {{ page.title }}">
+  <h2>{{ page.title }}</h2>
+  <div class="page-tags">
+    {% for tag in page.tags %}
+    <a class="tag" href="/tag/{{ tag | slugify }}"> {{ tag }} </a>
+    {% endfor %}
+  </div>
+  <span class="page-date">{{ page.date| date_to_long_string }}</span>
+  {{ page.content }}
+  {% if page.siteURL != null %}
+  <a href="{{ page.siteURL }}" class="button" target="_blank">Visit Site</a>
+  {% endif %}
+</article>

@@ -35,10 +35,12 @@ body {
   font-family: "Lato", Arial;
   text-rendering: optimizeLegibility;
   font-smoothing: antialiased;
-  font-size: 1.2rem;
 }
 h1, h2, h3, h4, h5, h6 {
   transition: color 0.2s ease;
+  margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.25;
 }
 html {
   font-size: 14px;

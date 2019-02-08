@@ -1,0 +1,36 @@
+article {
+  // font-size: 85%;
+  img {
+    @extend %shadow;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .post-date {
+    color: $dateColour;
+    display: block;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+    // font-size: 85%;
+  }
+  .post-tags {
+    margin-top: -.5rem;
+    margin-bottom: .5rem;
+    &:before {
+      content: '[';
+    }
+    &:after {
+      content: ']';
+    }
+  }
+  .tag {
+    // font-size: 85%;
+    padding: .25em .5em;
+    color: #bf616a;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: .5em;
+  }
+}

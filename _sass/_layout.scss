@@ -96,12 +96,6 @@ article {
   @include media(">tablet") {
     padding: 10%;
   }
-  img {
-    @extend %shadow;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
 }
 footer {
   padding: 2rem;
