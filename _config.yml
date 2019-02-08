@@ -37,6 +37,10 @@ navigation:
 plugins:
   - jekyll-sitemap
 
+# Where are tags and categories displayed
+tag_page: '/tags/'
+# category_page: '/blog/categories/'
+
 sass:
   style: compact # possible values: nested expanded compact compressed
 
