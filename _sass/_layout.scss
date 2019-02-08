@@ -45,7 +45,7 @@ aside {
     background: transparent;
     width: 30%;
     max-width: 413px;
-    position: relative;
+    position: fixed;
     margin-right: -100%;
     float: left;
     box-shadow: none;
@@ -70,7 +70,7 @@ main {
   display: flex;
   min-height: calc(100vh - #{$highlightBarHeight *2});
   flex-direction: column;
-  padding: 0;
+  padding: 0 6%;
   @include media(">tablet") {
     float: left;
     margin-left: 30%;
@@ -90,8 +90,9 @@ main {
 article {
   @extend %shadow;
   background: #fff;
-  margin: 5% 0;
+  margin: 5% auto;
   padding: 5%;
+  max-width: 600px;
   @include media(">tablet") {
     padding: 10%;
   }

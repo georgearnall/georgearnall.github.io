@@ -7,7 +7,13 @@ title: George Arnall - Portfolio
 <article>
   <img src="{{ post.image }}" alt="Preview of {{ post.title }}">
   <h2>{{ post.title }}</h2>
+  {% for tag in post.tags %}
+    <a href="#{{ tag | slugify }}"> {{ tag }} </a>
+  {% endfor %}
+  <p>{{ post.date| date_to_long_string }}</p>
   {{ post.content }}
-  <a href="{{ post.siteURL }}" class="button" target="_blank">Visit Site</a>
+  {% if post.siteURL != null %}
+    <a href="{{ post.siteURL }}" class="button" target="_blank">Visit Site</a>
+  {% endif %}
 </article>
 {% endfor %}
