@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -55,7 +57,7 @@ h1:hover {
   color: $highlightColour;
 }
 aside h2 {
-  color: lighten($bodyTextColour, 20%);
+  color: color.adjust($bodyTextColour, $lightness: 20%);
   font-size: 1.3rem;
   font-weight: normal;
 }
