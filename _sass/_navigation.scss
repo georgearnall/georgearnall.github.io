@@ -1,5 +1,7 @@
+@use 'sass:color';
+
 nav {
-  border-top: 1px solid darken($backgroundColour, 10%);
+  border-top: 1px solid color.adjust($backgroundColour, $lightness: -10%);
   display: flex;
   justify-content: space-around;
   @include media(">tablet") {
@@ -24,7 +26,7 @@ nav {
       font-size: 1.1rem;
       padding: 1rem 0;
       display: block;
-      border-bottom: 1px solid darken($backgroundColour, 10%);
+      border-bottom: 1px solid color.adjust($backgroundColour, $lightness: -10%);
       &:last-child {
         border-bottom: 0;
       }
